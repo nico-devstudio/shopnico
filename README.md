@@ -1,6 +1,6 @@
 # 🛒 ShopNico
 
-A responsive shopping cart application built with React as my first practical React project.
+A responsive shopping cart application built with React as my first practical React Project.
 
 ## 🌐 Live Demo
 
