@@ -6,7 +6,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [category, setCategory] = useState("");
-  const [checkoutMsg, setCheckoutMsg] = useState("Your Cart is empty");
+  const [checkoutMsg, setCheckoutMsg] = useState("");
   const [products, setProducts] = useState([
     { id: 1, name: "Keyboard", price: 50, category: "Accessories", stock: 8 },
     { id: 2, name: "Mouse", price: 25, category: "Accessories", stock: 26 },
@@ -21,6 +21,9 @@ function App() {
   ]);
 
   function handleAddProduct(product) {
+    if (product.stock === 0) {
+      return;
+    }
     setCheckoutMsg("");
 
     if (product.stock === 0) {
@@ -67,12 +70,10 @@ function App() {
 
   function handleRemoveItem(id) {
     setCart((prevList) => prevList.filter((product) => product.id !== id));
-    setCheckoutMsg("Your Cart is empty");
   }
 
   function handleClearCart() {
     setCart([]);
-    setCheckoutMsg("Your Cart is empty");
   }
 
   function handleSearch(input) {
@@ -86,6 +87,10 @@ function App() {
   );
 
   function handleCheckout() {
+    if (cart.length === 0) {
+      return;
+    }
+
     setProducts((prevProducts) =>
       prevProducts.map((product) => {
         const cartItem = cart.find((item) => item.id === product.id);

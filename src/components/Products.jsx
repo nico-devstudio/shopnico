@@ -26,7 +26,7 @@ export default function Products({
       </div>
 
       <ol>
-        {products.length >= 1 ? (
+        {products.length > 0 ? (
           products.map((product) => {
             const cartItem = cart.find((item) => item.id === product.id);
 

@@ -21,7 +21,10 @@ export default function Cart({
     <div className="cart">
       <h2>Cart</h2>
       {list.length === 0 ? (
-        <p>{msgCheckout}</p>
+        <>
+          <p>Your Cart is empty</p>
+          <p>{msgCheckout}</p>
+        </>
       ) : (
         <div>
           <ul>
