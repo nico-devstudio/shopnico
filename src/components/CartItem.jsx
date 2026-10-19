@@ -6,11 +6,20 @@ export default function CartItem({ onAdd, onDeduct, product, onRemove }) {
           Remove
         </button>
         <h4>{product.name}</h4>
-        <button onClick={() => onDeduct(product.id)} className="quantity-btn">
+        <button
+          onClick={() => onDeduct(product.id)}
+          className="quantity-btn"
+          disabled={product.quantity === 1}
+        >
           {" "}
           -{" "}
         </button>
-        <button onClick={() => onAdd(product.id)} className="quantity-btn">
+        <span>{product.quantity}</span>
+        <button
+          onClick={() => onAdd(product.id)}
+          className="quantity-btn"
+          disabled={product.quantity >= product.stock}
+        >
           {" "}
           +{" "}
         </button>

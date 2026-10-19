@@ -5,7 +5,7 @@ export default function Product({ product, onAdd, remainingStock }) {
       <p>${product.price.toFixed(2)}</p>
       <p>Available: {remainingStock} </p>
       <button onClick={() => onAdd(product)} disabled={remainingStock === 0}>
-        Add
+        {remainingStock === 0 ? "Out of Stock" : "Add to Cart"}
       </button>
     </li>
   );

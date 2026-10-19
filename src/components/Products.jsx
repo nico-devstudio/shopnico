@@ -10,19 +10,29 @@ export default function Products({
   return (
     <div>
       <h2>Products</h2>
+      <div className="products-filters">
+        <div>
+          <label htmlFor="product-search">Search:</label>
+          <input
+            id="product-search"
+            type="text"
+            onChange={(event) => onSearch(event.target.value)}
+            className="search-input"
+            placeholder="Search products..."
+          />
+        </div>
 
-      <h4>
-        Search:{" "}
-        <input type="text" onChange={(event) => onSearch(event.target.value)} />
-      </h4>
-
-      <div>
-        <strong>Category:</strong>
-        <select onChange={(event) => category(event.target.value)}>
-          <option value="">Select a category</option>
-          <option value="Accessories">Accessories</option>
-          <option value="Electronics">Electronics</option>
-        </select>
+        <div>
+          <strong>Category:</strong>
+          <select
+            onChange={(event) => category(event.target.value)}
+            className="category-select"
+          >
+            <option value="">All Categories</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Electronics">Electronics</option>
+          </select>
+        </div>
       </div>
 
       <ol>

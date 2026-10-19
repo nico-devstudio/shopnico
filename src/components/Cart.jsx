@@ -20,10 +20,10 @@ export default function Cart({
   return (
     <div className="cart">
       <h2>Cart</h2>
+      <p>{msgCheckout}</p>
       {list.length === 0 ? (
         <>
           <p>Your Cart is empty</p>
-          <p>{msgCheckout}</p>
         </>
       ) : (
         <div>
