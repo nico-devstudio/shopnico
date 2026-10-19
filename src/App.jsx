@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 import Products from "./components/Products";
 import Cart from "./components/Cart";
 
@@ -24,11 +25,8 @@ function App() {
     if (product.stock === 0) {
       return;
     }
-    setCheckoutMsg("");
 
-    if (product.stock === 0) {
-      return;
-    }
+    setCheckoutMsg("");
 
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
@@ -112,7 +110,10 @@ function App() {
 
   return (
     <>
-      <h1>ShopNico</h1>
+      <header className="shop-header">
+        <h1>ShopNico</h1>
+        <p>Simple shopping. Everyday essentials.</p>
+      </header>
 
       <Products
         onAdd={handleAddProduct}
