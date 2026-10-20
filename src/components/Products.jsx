@@ -9,7 +9,13 @@ export default function Products({
 }) {
   return (
     <div>
-      <h2>Products</h2>
+      <div className="products-heading">
+        <h2>Products</h2>
+        <span>
+          {products.length} {products.length === 1 ? "product" : "products"}{" "}
+          found
+        </span>
+      </div>
       <div className="products-filters">
         <div>
           <label htmlFor="product-search">Search:</label>
