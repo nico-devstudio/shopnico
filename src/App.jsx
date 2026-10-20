@@ -113,6 +113,12 @@ function App() {
       <header className="shop-header">
         <h1>ShopNico</h1>
         <p>Simple shopping. Everyday essentials.</p>
+        <div className="header-cart">
+          <span>Cart</span>
+          <span className="cart-badge">
+            {cart.reduce((total, item) => total + item.quantity, 0)}
+          </span>
+        </div>
       </header>
 
       <Products
