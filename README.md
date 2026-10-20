@@ -1,53 +1,51 @@
 # 🛒 ShopNico
 
-A responsive shopping cart application built with React as my first practical React Project.
+A responsive shopping cart application built with React, JavaScript, and CSS. ShopNico lets users browse products, search by name, filter by category, manage cart quantities, and complete a simulated checkout with inventory updates.
 
 ## 🌐 Live Demo
 
 [View ShopNico](https://nico-devstudio.github.io/shopnico/)
 
+## 📸 Preview
+
+![ShopNico Screenshot](./public/screenshots/shopnico.png)
+
 ## 💻 Repository
 
-[View source code](https://github.com/nico-devstudio/shopnico)
+[View source code on GitHub](https://github.com/nico-devstudio/shopnico)
 
 ## 🚀 Features
 
-- Display products
-- Add products to cart
-- Increase and decrease cart quantities
-- Remove individual cart items
-- Clear the entire cart
-- Search products
+- Display products with prices and available stock
+- Search products by name
 - Filter products by category
-- Display remaining stock
-- Prevent adding products when stock reaches zero
-- Calculate item subtotals
-- Calculate total items
-- Calculate total cart value
-- Checkout functionality
-- Automatically deduct purchased quantities from product stock
-- Display a checkout success message
-- Responsive design for desktop, tablet, and mobile
+- Add products to the shopping cart
+- Increase and decrease item quantities
+- Prevent cart quantities from exceeding available stock
+- Remove individual items or clear the entire cart
+- Display a dynamic cart item count
+- Calculate item subtotals, total quantities, and cart value
+- Simulate checkout and update product inventory
+- Display checkout confirmation
+- Show helpful feedback when no products match the search
+- Responsive layouts for desktop, tablet, and mobile
 
 ## 🧠 React Concepts Practiced
 
-This project was built to practice the fundamentals of React, including:
+This project helped me practice:
 
-- Components
-- Props
-- State with `useState`
-- State lifting
-- Event handling
-- Controlled inputs
+- Component composition and reusable components
+- Props and callback functions
+- State management with `useState`
+- Lifting state up
+- Event handling and controlled inputs
 - Conditional rendering
 - Rendering lists with `map()`
-- Filtering data with `filter()`
-- Finding items with `find()`
-- Calculating values with `reduce()`
+- Filtering and finding data with `filter()` and `find()`
+- Calculating derived values with `reduce()`
 - Immutable state updates
 - Functional state updates
-- Derived data
-- Passing callback functions between components
+- Managing cart and inventory state
 
 ## 🏗️ Component Structure
 
@@ -61,57 +59,41 @@ App
 
 ### App
 
-The main component owns the application's state and handles:
-
-- Cart state
-- Product inventory
-- Search state
-- Category state
-- Checkout functionality
-- Stock updates
+Manages the main application state, product inventory, search, category filtering, cart operations, and checkout.
 
 ### Products
 
-Responsible for:
-
-- Search input
-- Category selection
-- Product filtering
-- Calculating remaining stock
-- Rendering the product list
+Handles the search and category controls, displays matching products, and calculates the remaining stock available to add to the cart.
 
 ### Product
 
-Responsible for displaying an individual product and its available stock.
+Displays an individual product, its price, available stock, and Add to Cart button.
 
 ### Cart
 
-Responsible for:
-
-- Rendering cart items
-- Calculating total items
-- Calculating total price
-- Clearing the cart
-- Checkout
+Displays cart items, calculates totals, and provides clear-cart and checkout actions.
 
 ### CartItem
 
-Responsible for displaying an individual cart item and its:
-
-- Quantity controls
-- Remove button
-- Price
-- Subtotal
+Displays an individual cart item's quantity controls, removal action, price, and subtotal.
 
 ## 🛠️ Technologies
 
 - React
-- JavaScript
+- JavaScript (ES6+)
 - Vite
-- CSS
 - HTML
+- CSS
+- Git and GitHub
 
 ## ▶️ Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
 
 Clone the repository:
 
@@ -119,7 +101,7 @@ Clone the repository:
 git clone https://github.com/nico-devstudio/shopnico.git
 ```
 
-Navigate into the project directory:
+Navigate to the project directory:
 
 ```bash
 cd shopnico
@@ -137,20 +119,16 @@ Start the development server:
 npm run dev
 ```
 
-Open the local development URL provided by Vite.
+Open the local URL displayed by Vite in your browser.
 
 ## 📱 Responsive Design
 
-The application adapts to different screen sizes:
+The layout adapts to desktop, tablet, and mobile screen sizes.
 
-- Desktop
-- Tablet
-- Mobile
+## 🎯 Project Goal
 
-## 🎯 Purpose
-
-This project was created as a practical exercise to strengthen my understanding of React fundamentals before moving on to more advanced React concepts.
+ShopNico was built to strengthen my understanding of React fundamentals through a practical project involving reusable components, state management, derived data, cart operations, and inventory logic.
 
 ## 📚 Project Status
 
-**Project 1 — Completed ✅**
+**Completed — React Shopping Cart Project** ✅
