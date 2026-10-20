@@ -60,7 +60,9 @@ export default function Products({
             );
           })
         ) : (
-          <p>No products found.</p>
+          <p className="empty-products">
+            No products found. Try a different search or category.
+          </p>
         )}
       </ol>
     </div>
